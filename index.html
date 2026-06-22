@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silo // Desconexão & Comunidade Real</title>
+    <style>
+        :root {
+            --bg-primary: #f8f9fa;
+            --bg-card: #ffffff;
+            --text-main: #212529;
+            --text-muted: #6c757d;
+            --accent: #2b6cb0;
+            --accent-light: #ebf8ff;
+            --border: #e2e8f0;
+            --radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            max-width: 1000px;
+            margin: 40px auto 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        header h1 span {
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .tag-2026 {
+            background-color: var(--accent-light);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card p.subtitle {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        /* Ferramenta 1: Desintoxicação Digital Coletiva */
+        .timer-display {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 20px 0;
+            font-variant-numeric: tabular-nums;
+            color: var(--accent);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #235284;
+        }
+
+        .btn-secondary {
+            background-color: #edf2f7;
+            color: var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            background-color: #e2e8f0;
+        }
+
+        /* Ferramenta 2: Quadro de Avisos Hiperlocal (Humano Validado) */
+        .feed-item {
+            border-bottom: 1px solid var(--border);
+            padding: 12px 0;
+        }
+
+        .feed-item:last-child {
+            border-bottom: none;
+        }
+
+        .feed-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-bottom: 6px;
+        }
+
+        .tag-troca { background: #feebc8; color: #c05621; }
+        .tag-ajuda { background: #e6fffa; color: #234e52; }
+        .tag-evento { background: #e2e8f0; color: #4a5568; }
+
+        .feed-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .feed-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Criar Post Form */
+        .post-form {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .post-form input, .post-form select {
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            max-width: 1000px;
+            margin: 40px auto;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Silo <span>// Offline Tracker & Local Hub</span></h1>
+        <div class="tag-2026">Sociedade 2026</div>
+    </header>
+
+    <main>
+        <!-- LADO ESQUERDO: Módulo de Presença Mental -->
+        <div class="card">
+            <h2>⏱️ Modo Presença Real</h2>
+            <p class="subtitle">Bloqueie o ruído digital. Ative o timer, vire o celular para baixo e faça algo no mundo físico.</p>
+            
+            <div class="timer-display" id="timer">25:00</div>
+            
+            <div class="btn-group">
+                <button class="btn-primary" id="startBtn">Iniciar Desconexão</button>
+                <button class="btn-secondary" id="resetBtn">Resetar</button>
+            </div>
+
+            <div style="margin-top: 24px; padding: 12px; background: var(--bg-primary); border-radius: 8px; font-size: 0.85rem; color: var(--text-muted);">
+                💡 <strong>Ideias para agora:</strong> Ler um capítulo de livro impresso, organizar uma gaveta, regar as plantas ou conversar com quem está por perto sem telas.
+            </div>
+        </div>
+
+        <!-- LADO DIREITO: Módulo Antidoto à IA (Comunidade Analógica) -->
+        <div class="card">
+            <h2>🤝 Mural Anti-Algoritmo</h2>
+            <p class="subtitle">Avisos e interações sem IA, restritos estritamente ao seu bairro/quadra.</p>
+            
+            <div id="feed">
+                <!-- Itens iniciais estáticos simulando a rede -->
+                <div class="feed-item">
+                    <span class="feed-tag tag-troca">Empréstimo</span>
+                    <div class="feed-title">Alguém tem uma furadeira para emprestar neste sábado?</div>
+                    <div class="feed-meta">Por: Carlos M. (Apto 42) • Há 12 min</div>
+                </div>
+                <div class="feed-item">
+                    <span class="feed-tag tag-ajuda">Doação</span>
+                    <div class="feed-title">Caixas de papelão limpas para mudança disponíveis na garagem.</div>
+                    <div class="feed-meta">Por: Ana Júlia • Há 1 hora</div>
+                </div>
+                <div class="feed-item">
+                    <span class="feed-tag tag-evento">Encontro</span>
+                    <div class="feed-title">Clube do Livro do Bairro: Próximo sábado na praça central, às 16h. Tema: Biografias.</div>
+                    <div class="feed-meta">Por: Coletivo Local • Há 3 horas</div>
+                </div>
+            </div>
+
+            <!-- Formulário simulado para adicionar utilidade -->
+            <div class="post-form">
+                <h3 style="font-size: 0.9rem; margin-top: 10px;">Publicar um bilhete humano:</h3>
+                <input type="text" id="postText" placeholder="O que você precisa ou oferece fisicamente perto de você?">
+                <select id="postTag">
+                    <option value="troca">Troca/Empréstimo</option>
+                    <option value="ajuda">Ajuda/Doação</option>
+                    <option value="evento">Evento Local</option>
+                </select>
+                <button class="btn-secondary" id="sendBtn" style="padding: 8px;">Fixar no Mural</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Silo — Plataforma hipotética focada na regeneração urbana e atenção humana para 2026.</p>
+    </footer>
+
+    <script>
+        // Logica do Timer (Pomodoro Invertido para Desconexão)
+        let timerInterval;
+        let timeLeft = 25 * 60; // 25 minutos
+        let isRunning = false;
+
+        const timerDisplay = document.getElementById('timer');
+        const startBtn = document.getElementById('startBtn');
+        const resetBtn = document.getElementById('resetBtn');
+
+        function updateDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        startBtn.addEventListener('click', () => {
+            if (isRunning) {
+                clearInterval(timerInterval);
+                startBtn.textContent = 'Retomar Desconexão';
+                startBtn.style.backgroundColor = 'var(--accent)';
+                isRunning = false;
+            } else {
+                isRunning = true;
+                startBtn.textContent = 'Pausar (O mundo real espera)';
+                startBtn.style.backgroundColor = '#e53e3e';
+                timerInterval = setInterval(() => {
+                    if (timeLeft > 0) {
+                        timeLeft--;
+                        updateDisplay();
+                    } else {
+                        clearInterval(timerInterval);
+                        alert("Parabéns! Você concluiu seu tempo de presença no mundo real.");
+                        timeLeft = 25 * 60;
+                        updateDisplay();
+                        startBtn.textContent = 'Iniciar Desconexão';
+                        isRunning = false;
+                    }
+                }, 1000);
+            }
+        });
+
+        resetBtn.addEventListener('click', () => {
+            clearInterval(timerInterval);
+            timeLeft = 25 * 60;
+            updateDisplay();
+            startBtn.textContent = 'Iniciar Desconexão';
+            startBtn.style.backgroundColor = 'var(--accent)';
+            isRunning = false;
+        });
+
+        // Logica de Adicionar ao Mural Local
+        const sendBtn = document.getElementById('sendBtn');
+        const postTextInput = document.getElementById('postText');
+        const postTagSelect = document.getElementById('postTag');
+        const feed = document.getElementById('feed');
+
+        sendBtn.addEventListener('click', () => {
+            const text = postTextInput.value.trim();
+            if(!text) return;
+
+            const tagValue = postTagSelect.value;
+            let tagClass = 'tag-evento';
+            let tagText = 'Evento';
+
+            if(tagValue === 'troca') { tagClass = 'tag-troca'; tagText = 'Empréstimo'; }
+            else if(tagValue === 'ajuda') { tagClass = 'tag-ajuda'; tagText = 'Ajuda/Doação'; }
+
+            // Criando elemento
+            const newItem = document.createElement('div');
+            newItem.className = 'feed-item';
+            newItem.innerHTML = `
+                <span class="feed-tag ${tagClass}">${tagText}</span>
+                <div class="feed-title">${text}</div>
+                <div class="feed-meta">Por: Você • Agora mesmo</div>
+            `;
+
+            feed.insertBefore(newItem, feed.firstChild);
+            postTextInput.value = ''; // Limpa campo
+        });
+    </script>
+</body>
+</html>
+
