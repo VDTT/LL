@@ -32,7 +32,7 @@
 
         header {
             max-width: 1000px;
-            margin: 40px auto 20px auto;
+            margin: 30px auto 10px auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -58,6 +58,55 @@
             font-weight: 600;
         }
 
+        /* BARRA DE NAVEGAÇÃO / LINK PEDIDO */
+        .nav-bar {
+            max-width: 1000px;
+            margin: 0 auto 20px auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 12px 20px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .partner-link-top {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .partner-link-top:hover {
+            text-decoration: underline;
+        }
+
+        /* ÁREAS DE ANÚNCIO CORRIGIDAS */
+        .ad-banner-top {
+            max-width: 1000px;
+            margin: 10px auto 25px auto;
+            text-align: center;
+            min-height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ad-banner-side {
+            margin: 20px auto;
+            width: 300px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f1f3f5;
+            border: 1px dashed #ced4da;
+        }
+
         main {
             max-width: 1000px;
             margin: 0 auto;
@@ -78,6 +127,7 @@
             border-radius: var(--radius);
             padding: 24px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 24px;
         }
 
         .card h2 {
@@ -94,7 +144,7 @@
             margin-bottom: 20px;
         }
 
-        /* Ferramenta 1: Desintoxicação Digital Coletiva */
+        /* TIMER CONTROL */
         .timer-display {
             font-size: 3rem;
             font-weight: 700;
@@ -138,7 +188,212 @@
             background-color: #e2e8f0;
         }
 
-        /* Ferramenta 2: Quadro de Avisos Hiperlocal (Humano Validado) */
+        /* MURAL FEED */
+        .feed-item {
+            border-bottom: 1px solid var(--border);
+            padding: 12px 0;
+        }
+
+        .feed-item:last-child {
+            border-bottom: none;
+        }
+
+        .feed-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: bold;
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silo // Desconexão & Comunidade Real</title>
+    <style>
+        :root {
+            --bg-primary: #f8f9fa;
+            --bg-card: #ffffff;
+            --text-main: #212529;
+            --text-muted: #6c757d;
+            --accent: #2b6cb0;
+            --accent-light: #ebf8ff;
+            --border: #e2e8f0;
+            --radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            max-width: 1000px;
+            margin: 30px auto 10px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        header h1 span {
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .tag-2026 {
+            background-color: var(--accent-light);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* BARRA DE NAVEGAÇÃO / LINK PEDIDO */
+        .nav-bar {
+            max-width: 1000px;
+            margin: 0 auto 20px auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 12px 20px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .partner-link-top {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .partner-link-top:hover {
+            text-decoration: underline;
+        }
+
+        /* ÁREAS DE ANÚNCIO CORRIGIDAS */
+        .ad-banner-top {
+            max-width: 1000px;
+            margin: 10px auto 25px auto;
+            text-align: center;
+            min-height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ad-banner-side {
+            margin: 20px auto;
+            width: 300px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f1f3f5;
+            border: 1px dashed #ced4da;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 24px;
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card p.subtitle {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        /* TIMER CONTROL */
+        .timer-display {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 20px 0;
+            font-variant-numeric: tabular-nums;
+            color: var(--accent);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #235284;
+        }
+
+        .btn-secondary {
+            background-color: #edf2f7;
+            color: var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            background-color: #e2e8f0;
+        }
+
+        /* MURAL FEED */
         .feed-item {
             border-bottom: 1px solid var(--border);
             padding: 12px 0;
@@ -173,7 +428,6 @@
             color: var(--text-muted);
         }
 
-        /* Criar Post Form */
         .post-form {
             margin-top: 15px;
             display: flex;
@@ -206,58 +460,82 @@
         <div class="tag-2026">Sociedade 2026</div>
     </header>
 
+    <!-- LINK PRINCIPAL PEDIDO SOLICITADO (AGORA VISÍVEL NO TOPO) -->
+    <nav class="nav-bar">
+        <a href="https://newstec661.github.io/Newstec/" target="_blank" class="partner-link-top">
+            🌐 VISITE NOSSO PARCEIRO: Newstec - Notícias e Tecnologia Nacional
+        </a>
+    </nav>
+
+    <!-- ANÚNCIO DO TOPO CORRIGIDO -->
+    <div class="ad-banner-top">
+        <script async="async" data-cfasync="false" src="https://pl29852477.effectivecpmnetwork.com/0725b69d23eb08eb25fbadfa62b5dec4/invoke.js"></script>
+        <div id="container-0725b69d23eb08eb25fbadfa62b5dec4"></div>
+    </div>
+
     <main>
         <!-- LADO ESQUERDO: Módulo de Presença Mental -->
-        <div class="card">
-            <h2>⏱️ Modo Presença Real</h2>
-            <p class="subtitle">Bloqueie o ruído digital. Ative o timer, vire o celular para baixo e faça algo no mundo físico.</p>
-            
-            <div class="timer-display" id="timer">25:00</div>
-            
-            <div class="btn-group">
-                <button class="btn-primary" id="startBtn">Iniciar Desconexão</button>
-                <button class="btn-secondary" id="resetBtn">Resetar</button>
-            </div>
+        <div>
+            <div class="card">
+                <h2>⏱️ Modo Presença Real</h2>
+                <p class="subtitle">Bloqueie o ruído digital. Ative o timer, vire o celular para baixo e faça algo no mundo físico.</p>
+                
+                <div class="timer-display" id="timer">25:00</div>
+                
+                <div class="btn-group">
+                    <button class="btn-primary" id="startBtn">Iniciar Desconexão</button>
+                    <button class="btn-secondary" id="resetBtn">Resetar</button>
+                </div>
 
-            <div style="margin-top: 24px; padding: 12px; background: var(--bg-primary); border-radius: 8px; font-size: 0.85rem; color: var(--text-muted);">
-                💡 <strong>Ideias para agora:</strong> Ler um capítulo de livro impresso, organizar uma gaveta, regar as plantas ou conversar com quem está por perto sem telas.
+                <div style="margin-top: 24px; padding: 12px; background: var(--bg-primary); border-radius: 8px; font-size: 0.85rem; color: var(--text-muted);">
+                    💡 <strong>Ideias para agora:</strong> Ler um capítulo de livro impresso, organizar uma gaveta, regar as plantas ou conversar com quem está por perto sem telas.
+                </div>
             </div>
         </div>
 
-        <!-- LADO DIREITO: Módulo Antidoto à IA (Comunidade Analógica) -->
-        <div class="card">
-            <h2>🤝 Mural Anti-Algoritmo</h2>
-            <p class="subtitle">Avisos e interações sem IA, restritos estritamente ao seu bairro/quadra.</p>
-            
-            <div id="feed">
-                <!-- Itens iniciais estáticos simulando a rede -->
-                <div class="feed-item">
-                    <span class="feed-tag tag-troca">Empréstimo</span>
-                    <div class="feed-title">Alguém tem uma furadeira para emprestar neste sábado?</div>
-                    <div class="feed-meta">Por: Carlos M. (Apto 42) • Há 12 min</div>
+        <!-- LADO DIREITO: Módulo Mural e Segundo Anúncio -->
+        <div>
+            <div class="card">
+                <h2>🤝 Mural Anti-Algoritmo</h2>
+                <p class="subtitle">Avisos e interações sem IA, restritos estritamente ao seu bairro/quadra.</p>
+                
+                <div id="feed">
+                    <div class="feed-item">
+                        <span class="feed-tag tag-troca">Empréstimo</span>
+                        <div class="feed-title">Alguém tem uma furadeira para emprestar neste sábado?</div>
+                        <div class="feed-meta">Por: Carlos M. (Apto 42) • Há 12 min</div>
+                    </div>
+                    <div class="feed-item">
+                        <span class="feed-tag tag-ajuda">Doação</span>
+                        <div class="feed-title">Caixas de papelão limpas para mudança disponíveis na garagem.</div>
+                        <div class="feed-meta">Por: Ana Júlia • Há 1 hora</div>
+                    </div>
                 </div>
-                <div class="feed-item">
-                    <span class="feed-tag tag-ajuda">Doação</span>
-                    <div class="feed-title">Caixas de papelão limpas para mudança disponíveis na garagem.</div>
-                    <div class="feed-meta">Por: Ana Júlia • Há 1 hora</div>
-                </div>
-                <div class="feed-item">
-                    <span class="feed-tag tag-evento">Encontro</span>
-                    <div class="feed-title">Clube do Livro do Bairro: Próximo sábado na praça central, às 16h. Tema: Biografias.</div>
-                    <div class="feed-meta">Por: Coletivo Local • Há 3 horas</div>
-                </div>
-            </div>
 
-            <!-- Formulário simulado para adicionar utilidade -->
-            <div class="post-form">
-                <h3 style="font-size: 0.9rem; margin-top: 10px;">Publicar um bilhete humano:</h3>
-                <input type="text" id="postText" placeholder="O que você precisa ou oferece fisicamente perto de você?">
-                <select id="postTag">
-                    <option value="troca">Troca/Empréstimo</option>
-                    <option value="ajuda">Ajuda/Doação</option>
-                    <option value="evento">Evento Local</option>
-                </select>
-                <button class="btn-secondary" id="sendBtn" style="padding: 8px;">Fixar no Mural</button>
+                <!-- ANÚNCIO LATERAL BANNER 300x250 INJETADO AQUI -->
+                <div class="ad-banner-side">
+                    <script>
+                      atOptions = {
+                        'key' : 'b2501142a79f2fe81fd0ed358c373368',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                      };
+                    </script>
+                    <script src="https://www.highperformanceformat.com/b2501142a79f2fe81fd0ed358c373368/invoke.js"></script>
+                </div>
+
+                <div class="post-form">
+                    <h3 style="font-size: 0.9rem; margin-top: 10px;">Publicar um bilhete humano:</h3>
+                    <input type="text" id="postText" placeholder="O que você precisa ou oferece fisicamente perto de você?">
+                    <select id="postTag">
+                        <option value="troca">Troca/Empréstimo</option>
+                        <option value="ajuda">Ajuda/Doação</option>
+                        <option value="evento">Evento Local</option>
+                    </select>
+                    <button class="btn-secondary" id="sendBtn" style="padding: 8px;">Fixar no Mural</button>
+                </div>
             </div>
         </div>
     </main>
@@ -267,9 +545,9 @@
     </footer>
 
     <script>
-        // Logica do Timer (Pomodoro Invertido para Desconexão)
+        // Logica do Timer
         let timerInterval;
-        let timeLeft = 25 * 60; // 25 minutos
+        let timeLeft = 25 * 60;
         let isRunning = false;
 
         const timerDisplay = document.getElementById('timer');
@@ -334,7 +612,6 @@
             if(tagValue === 'troca') { tagClass = 'tag-troca'; tagText = 'Empréstimo'; }
             else if(tagValue === 'ajuda') { tagClass = 'tag-ajuda'; tagText = 'Ajuda/Doação'; }
 
-            // Criando elemento
             const newItem = document.createElement('div');
             newItem.className = 'feed-item';
             newItem.innerHTML = `
@@ -344,9 +621,117 @@
             `;
 
             feed.insertBefore(newItem, feed.firstChild);
-            postTextInput.value = ''; // Limpa campo
+            postTextInput.value = '';
         });
     </script>
 </body>
 </html>
+￼Enter      padding: 2px 6px;
+            border-radius: 4px;
+            margin-bottom: 6px;
+        }
 
+        .tag-troca { background: #feebc8; color: #c05621; }
+        .tag-ajuda { background: #e6fffa; color: #234e52; }
+        .tag-evento { background: #e2e8f0; color: #4a5568; }
+
+        .feed-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .feed-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .post-form {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .post-form input, .post-form select {
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            max-width: 1000px;
+            margin: 40px auto;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Silo <span>// Offline Tracker & Local Hub</span></h1>
+        <div class="tag-2026">Sociedade 2026</div>
+    </header>
+
+    <!-- LINK PRINCIPAL PEDIDO SOLICITADO (AGORA VISÍVEL NO TOPO) -->
+    <nav class="nav-bar">
+        <a href="https://newstec661.github.io/Newstec/" target="_blank" class="partner-link-top">
+            🌐 VISITE NOSSO PARCEIRO: Newstec - Notícias e Tecnologia Nacional
+        </a>
+    </nav>
+
+    <!-- ANÚNCIO DO TOPO CORRIGIDO -->
+    <div class="ad-banner-top">
+        <script async="async" data-cfasync="false" src="https://pl29852477.effectivecpmnetwork.com/0725b69d23eb08eb25fbadfa62b5dec4/invoke.js"></script>
+        <div id="container-0725b69d23eb08eb25fbadfa62b5dec4"></div>
+    </div>
+
+    <main>
+        <!-- LADO ESQUERDO: Módulo de Presença Mental -->
+        <div>
+            <div class="card">
+                <h2>⏱️ Modo Presença Real</h2>
+                <p class="subtitle">Bloqueie o ruído digital. Ative o timer, vire o celular para baixo e faça algo no mundo físico.</p>
+                
+                <div class="timer-display" id="timer">25:00</div>
+                
+                <div class="btn-group">
+                    <button class="btn-primary" id="startBtn">Iniciar Desconexão</button>
+                    <button class="btn-secondary" id="resetBtn">Resetar</button>
+                </div>
+
+                <div style="margin-top: 24px; padding: 12px; background: var(--bg-primary); border-radius: 8px; font-size: 0.85rem; color: var(--text-muted);">
+                    💡 <strong>Ideias para agora:</strong> Ler um capítulo de livro impresso, organizar uma gaveta, regar as plantas ou conversar com quem está por perto sem telas.
+                </div>
+            </div>
+        </div>
+
+        <!-- LADO DIREITO: Módulo Mural e Segundo Anúncio -->
+        <div>
+            <div class="card">
+                <h2>🤝 Mural Anti-Algoritmo</h2>
+                <p class="subtitle">Avisos e interações sem IA, restritos estritamente ao seu bairro/quadra.</p>
+                
+                <div id="feed">
+                    <div class="feed-item">
+                        <span class="feed-tag tag-troca">Empréstimo</span>
+                        <div class="feed-title">Alguém tem uma furadeira para emprestar neste sábado?</div>
+                        <div class="feed-meta">Por: Carlos M. (Apto 42) • Há 12 min</div>
+                    </div>
+                    <div class="feed-item">
+                        <span class="feed-tag tag-ajuda">Doação</span>
+                        <div class="feed-title">Caixas de papelão limpas para mudança disponíveis na garagem.</div>
+                        <div class="feed-meta">Por: Ana Júlia • Há 1 hora</div>
+                    </div>
+                </div>
+
+                <!-- ANÚNCIO LATERAL BANNER 300x250 INJETADO AQUI -->
+                <div class="ad-banner-side">
+                    <script>
+                      atOptions = {
+                        'key' : 'b2501142a79f2fe81fd0ed358c373368',
